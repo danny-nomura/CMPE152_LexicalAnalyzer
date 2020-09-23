@@ -12,7 +12,7 @@ public class Main {
 		try{
 			InputStream inStream = Main.class.getClassLoader().getResourceAsStream("codeBlock.txt");
 			Scanner myScan = new Scanner(inStream);
-			myScan.useDelimiter("\\ ");	// tokenize at space
+			myScan.useDelimiter("\\ |\n |\t");	// tokenize at space, newline, or tab
 
 			while(myScan.hasNext()){
 				String c = myScan.next().trim();

@@ -1,37 +1,30 @@
 package main;
 
 import java.io.IOException;
-import java.io.*;
-
+import java.io.InputStream;
+import java.util.Scanner;
 import lexer.Lexer;
 import lexer.Token;
 
 public class Main {
 
-	// Added Method
-   public static void readCode() throws IOException {
-      // read input file
-      FileInputStream inFile = null;
-      try{
-         inFile = new FileInputStream("codeBlock.txt");
-         int a;
-         while((a = inFile.read()) != -1){
-            System.out.print((char)a);
-         }
-      }
-      finally{
-         if(inFile != null){
-			 inFile.close();
-		 }
-      }
+	public static void readCode() throws IOException {
+		try{
+			InputStream inStream = Main.class.getClassLoader().getResourceAsStream("codeBlock.txt");
+			Scanner myScan = new Scanner(inStream);
+			myScan.useDelimiter("\\ ");	// tokenize at space
 
-      // while not eof
-         // tokenID = scan()
-         // typeName = tokenID.getTypeName
-         // stringContents = originalInput
-         // print typeName and stringContents
-         // get next token
-   }
+			while(myScan.hasNext()){
+				String c = myScan.next().trim();
+				System.out.println(c);
+			}
+			myScan.close();
+			inStream.close();
+		}
+		finally{
+			System.out.print("----------\n");
+		}	
+	}
 
 	public static void main(String[] args) throws IOException {
 		Lexer lex = new Lexer();

@@ -2,6 +2,7 @@ package lexer;
 
 import symbols.Type;
 
+import java.io.*;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -81,4 +82,5 @@ public class Lexer {
       Token tok = new Token(peek); peek = ' ';
       return tok;
    }
+   
 }

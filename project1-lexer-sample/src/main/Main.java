@@ -21,7 +21,7 @@ public class Main {
 			if(tok == null) {
 				//print error message
 				break;
-			} else if (tok.tag == -1) {
+			} else if (tok.tag == (char)-1) { //thanks KC
 				//tbh idk how to implement detecting EOF
 				//kinda hoping it just works!
 				break;

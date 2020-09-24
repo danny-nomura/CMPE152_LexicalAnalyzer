@@ -3,6 +3,7 @@ package lexer;
 import symbols.Type;
 
 import java.io.*;
+import java.util.Scanner;
 import java.io.IOException;
 import java.util.HashMap;
 
@@ -33,6 +34,33 @@ public class Lexer {
       peek = ' ';
       return true;
    }
+
+   public void readCode() throws IOException {
+		try{
+			InputStream inStream = Lexer.class.getClassLoader().getResourceAsStream("codeBlock.txt");
+			Scanner myScan = new Scanner(inStream);
+			myScan.useDelimiter("\\ |\n |\t");	// tokenize at space, newline, or tab
+
+			while(myScan.hasNext()){
+				String c = myScan.next().trim();
+				char[] temp = c.toCharArray();
+				/*
+				for(int z = 0; z < c.length(); z++){
+					temp[z] = c.charAt(z);
+				}
+				*/
+				// char temp = (char) Integer.parseInt(c);
+				System.out.println("This is temp: " + new String(temp));
+				System.out.println(c);
+			}
+			myScan.close();
+			inStream.close();
+		}
+		finally{ 
+			System.out.print("----------\n");
+		}	
+	}
+
    public Token scan() throws IOException {
       for( ; ; readch() ) {
          if( peek == ' ' || peek == '\t' ) continue;

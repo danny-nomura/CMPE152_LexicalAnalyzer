@@ -1,3 +1,5 @@
-This is a testfile for lexer.
-Newline
-Tab	tab
+while ( x < 3 ) {
+	int a = x + 1 ;
+	int b = x % 1 ;
+	x = x + 1 ;
+}

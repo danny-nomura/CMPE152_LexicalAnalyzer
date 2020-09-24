@@ -1,4 +1,5 @@
-/* A modified sample lexer from the dragon book. */
+/* Project One - Lexical Analyzer - Group Four */
+Kyle Carter, Luan Nguyen, Daniel Nomura, Michael Pearson, 
 
 First, you need to install JDK on your machine if you haven't
 done so. After installation, you may need to update your
@@ -21,6 +22,8 @@ javac main/Main.java
 To run the lexer in command line:
 
 java  main.Main < test_file
+java  main.Main < test_file_two
+java  main.Main < test_file_three
 
 2. If you use IntelliJ Idea IDE
 In the IntelliJ IDE, create a project and import the code. Then use

@@ -1,3 +1,9 @@
+SJSU - CMPE - 152 - COMPILER DESIGN - FALL 2020
+Project Group 4 
+Kyle Carter, Luan Nguyen, Daniel Nomura and, Michael Pearson
+
+Modified readme from sample project follows:
+
 /* A modified sample lexer from the dragon book. */
 
 First, you need to install JDK on your machine if you haven't

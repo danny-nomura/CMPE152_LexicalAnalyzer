@@ -1,10 +1,7 @@
-SJSU - CMPE - 152 - COMPILER DESIGN - FALL 2020
-Project Group 4 
-Kyle Carter, Luan Nguyen, Daniel Nomura and, Michael Pearson
+/* Project One - Lexical Analyzer - Group Four */
+Kyle Carter, Luan Nguyen, Daniel Nomura, Michael Pearson, 
 
 Modified readme from sample project follows:
-
-/* A modified sample lexer from the dragon book. */
 
 First, you need to install JDK on your machine if you haven't
 done so. After installation, you may need to update your
@@ -27,6 +24,8 @@ javac main/Main.java
 To run the lexer in command line:
 
 java  main.Main < test_file
+java  main.Main < test_file_two
+java  main.Main < test_file_three
 
 2. If you use IntelliJ Idea IDE
 In the IntelliJ IDE, create a project and import the code. Then use

@@ -8,24 +8,6 @@ import lexer.Token;
 
 public class Main {
 
-	public static void readCode() throws IOException {
-		try{
-			InputStream inStream = Main.class.getClassLoader().getResourceAsStream("codeBlock.txt");
-			Scanner myScan = new Scanner(inStream);
-			myScan.useDelimiter("\\ |\n |\t");	// tokenize at space, newline, or tab
-
-			while(myScan.hasNext()){
-				String c = myScan.next().trim();
-				System.out.println(c);
-			}
-			myScan.close();
-			inStream.close();
-		}
-		finally{
-			System.out.print("----------\n");
-		}	
-	}
-
 	public static void main(String[] args) throws IOException {
 		Lexer lex = new Lexer();
 	    Token t = lex.scan();
@@ -34,6 +16,7 @@ public class Main {
 		// until EOF and output each token's type name and its actual
 		// string contents (lexeme).
 		System.out.write('\n');
-		readCode();
+		lex.readCode();
 	}
 }
+
